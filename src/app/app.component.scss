@@ -1,0 +1,224 @@
+.bg-color {
+    background: #F6F8FB;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 101px 29px 99px 29px;
+    box-sizing: border-box;
+  }
+  
+  .rectangle-81 {
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+    border-radius: 9px;
+    background: #FFFFFF;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 100%;
+  }
+  
+  .vector-2 {
+    background: rgba(0,0,0,0.2);
+    margin: 8.5px 6px 6.5px 0;
+    width: 118px;
+    height: 1px;
+  }
+  
+  .vector-3 {
+    background: rgba(0,0,0,0.2);
+    margin: 8.5px 0 6.5px 0;
+    width: 131px;
+    height: 1px;
+  }
+  
+  .awari {
+    position: relative;
+    margin: 0 0 69.5px 0;
+    display: inline-block;
+    align-self: flex-start;
+    word-break: break-word;
+    font-family: 'Outfit';
+    font-weight: bold;
+    font-size: 48px;
+    color: #1673FA;
+  }
+  
+  .seja-bem-vindo {
+    position: absolute;
+    left: 29px;
+    top: 158px;
+    word-break: break-word;
+    font-family: 'Outfit';
+    font-weight: normal;
+    font-size: 32px;
+    color: #000000;
+  }
+  
+  .boto-de-login {
+    border-radius: 5px;
+    background: #1673FA;
+    position: relative;
+    margin: 0 15px 13.5px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10.5px 1px 11px 0;
+    width: 158.9px;
+    box-sizing: border-box;
+  }
+  
+  .entrar {
+    word-break: break-word;
+    font-family: 'Lato';
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF;
+  }
+  
+  .entrar-com-facebook, .entrar-com-google, .entrar-com-twitter {
+    word-break: break-word;
+    font-family: 'Inter';
+    font-weight: normal;
+    font-size: 15px;
+    letter-spacing: 1.7px;
+    color: #FFFFFF;
+  }
+  
+  .senha, .email {
+    position: relative;
+    margin: 0 3.8px 22.5px 3.8px;
+    display: inline-block;
+    align-self: flex-start;
+    word-break: break-word;
+    font-family: 'Outfit';
+    font-weight: bold;
+    font-size: 16px;
+    color: rgba(0,0,0,0.78);
+  }
+  
+  .sem-conta {
+    font-family: 'Outfit';
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.333;
+    color: rgba(0,0,0,0.62);
+  }
+  
+  .sem-conta-1 {
+    margin: 0 6.8px 0 0;
+    word-break: break-word;
+    font-family: 'Outfit';
+    font-weight: normal;
+    font-size: 13px;
+    color: #C9C9C9;
+  }
+  
+  .esqueceu-a-senha, .esqueceu-a-senha-2, .esqueceu-a-senha-3 {
+    word-break: break-word;
+    font-family: 'Outfit';
+    font-weight: normal;
+    font-size: 14px;
+    text-decoration: underline;
+    color: rgba(0,0,0,0.74);
+  }
+  
+  .manter-conectado {
+    word-break: break-word;
+    font-family: 'Outfit';
+    font-weight: normal;
+    font-size: 14px;
+    color: #000000;
+  }
+  
+  .rectangle-27, .rectangle-28 {
+    border-radius: 5px;
+    border: 0.6px solid #1673FA;
+    background: #FFFFFF;
+    position: absolute;
+    left: 29px;
+  }
+  
+  .rectangle-27 {
+    top: 341px;
+    right: 29px;
+  }
+  
+  .rectangle-28 {
+    top: 254px;
+    right: 29px;
+  }
+  
+  .rectangle-85 {
+    border-radius: 1px;
+    border: 0.4px solid #000000;
+    background: #1673FA;
+    margin: 6.5px 5.6px 4.5px 0;
+    width: 7px;
+    height: 7px;
+  }
+  
+  .container {
+    border-radius: 5px;
+    background: #3AA0D0;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 9px 0 10px 1px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .container-4 {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+  }
+  
+  .container-5 {
+    border-radius: 5px;
+    background: #0084F9;
+    position: relative;
+    margin: 0 0 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px 7px 9px 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .container-6 {
+    position: relative;
+    margin: 0 0 35.5px 3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 296px;
+    box-sizing: border-box;
+  }
+  
+  .container-7 {
+    position: relative;
+    margin: 0 2px 23.5px 0;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    box-sizing: border-box;
+  }
+  
+  .container-8 {
+    border-radius: 5px;
+    background: #CF4332;
+    position: relative;
+    margin: 0 0 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px 1px 9px 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
