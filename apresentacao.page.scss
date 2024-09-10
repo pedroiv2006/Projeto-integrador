@@ -1,0 +1,110 @@
+.bg-color {
+    background: #F6F8FB;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 8px;
+    box-sizing: border-box;
+  }
+  
+  .d-o-prximo-passo {
+    margin: 0 0 24px 0;
+    display: inline-block;
+    align-self: flex-start;
+    word-break: break-word;
+    font-family: 'Lato';
+    font-weight: bold;
+    font-size: 24px;
+    color: #000000;
+  }
+  
+  .receba-apoio-em-sua-carreira-com-consultorias-individuais {
+    margin: 0 0 40px 0;
+    display: inline-block;
+    align-self: flex-start;
+    word-break: break-word;
+    font-family: 'Lato';
+    font-weight: bold;
+    font-size: 20px;
+    color: #8493AC;
+  }
+  
+  .image-2 {
+    background: url('https://fn12.com/api/clusters/cluster-fn12-prod-us-west1/trialprojects/trial-VmMo11dnuEyVHwXCeBDE26/assets/images/b8ff199402860629fa2a1753e9ba0a946c847548?Expires=1712151347&KeyName=fn12-cdn&Signature=rsSNhtEnwS6B0LnPiVrC6ZA19gM=');
+    margin: 0 16px 34px 16px;
+    align-self: flex-start;
+    width: 62px;
+    height: 19px;
+  }
+  
+  .button {
+    border-radius: 40px;
+    background: #1673FA;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 16px 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .group-1 {
+    margin: 0 1px 80px 0;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    gap: 0 16px;
+    width: 68px;
+    box-sizing: border-box;
+  }
+  
+  .ellipse-1, .ellipse-2, .ellipse-3 {
+    border-radius: 6px;
+    width: 12px;
+    height: 12px;
+  }
+  
+  .ellipse-1 {
+    background: #1673FA;
+  }
+  
+  .ellipse-2, .ellipse-3 {
+    background: #D9D9D9;
+  }
+  
+  .vector {
+    position: relative;
+    margin: 0 12.4px 40px 0;
+    align-self: center;
+    width: 254.6px;
+    height: 276px;
+  }
+  
+  .image-5 {
+    background: url('https://fn12.com/api/clusters/cluster-fn12-prod-us-west1/trialprojects/trial-VmMo11dnuEyVHwXCeBDE26/assets/images/c3ba710f6f7bd90a1ba021b9ed73f1febd4bd886?Expires=1712151347&KeyName=fn12-cdn&Signature=1qj8sZrin6bNdFOYdQGMRrYljSc=') 50% / cover no-repeat;
+    position: absolute;
+    left: 50%;
+    top: 210px;
+    transform: translateX(-50%);
+    width: 282px;
+    height: 205px;
+  }
+  
+  .container {
+    border-radius: 8px;
+    background: #FFFFFF;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 32px 76px 32px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .continuar {
+    word-break: break-word;
+    font-family: 'Lato';
+    font-weight: black;
+    font-size: 18px;
+    color: #FFFFFF;
+  }
+  
