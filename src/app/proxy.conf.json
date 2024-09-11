@@ -1,0 +1,13 @@
+{"/requisicao/*":{
+
+    "target": "http://localhost/miles/index.php",
+    
+    "secure": false,
+    
+    "changeOrigin": true,
+    
+    "logLevel": "debug"
+}
+
+}
+    

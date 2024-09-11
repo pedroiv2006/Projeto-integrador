@@ -1,20 +1,56 @@
-<ion-header [translucent]="true">
+<!-- home.page.html -->
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title>Matec Solar</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<app-menu content-id="home-content"></app-menu>
+<ion-content [fullscreen]="true" id="home-content">
+  <div class="logo-title-container" style="text-align: center;">
+    <img src="https://i.imgur.com/26Qrx4H.png" alt="Matec" class="logo"/>
+    <h1 class="app-title">Matec Solar</h1>
   </div>
+
+  <div class="welcome-message" style="text-align: center;">
+    <ion-icon name="megaphone-outline" class="megaphone-icon" style="font-size: 2rem;"></ion-icon>
+    <p>Bem-vindo(a) ao Matec Solar! Estamos aqui para ajudar você a maximizar a eficiência da sua energia solar.</p>
+  </div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-button expand="block" fill="solid" color="success" class="square-button" [routerLink]="['/agendamento-exemplo']">
+          <ion-icon name="calendar-outline" slot="start"></ion-icon>
+          <div>Agendamento</div>
+        </ion-button>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-button expand="block" fill="solid" color="success" class="square-button" [routerLink]="['/grafico-exemplo']">
+          <ion-icon name="bar-chart-outline" slot="start"></ion-icon>
+          <div>Gráfico</div>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="6">
+        <ion-button expand="block" fill="solid" color="success" class="square-button" [routerLink]="['/perfil-exemplo']">
+          <ion-icon name="person-outline" slot="start"></ion-icon>
+          <div>Perfil</div>
+        </ion-button>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-button expand="block" fill="solid" color="success" class="square-button" [routerLink]="['/feedback-exemplo']">
+          <ion-icon name="chatbubbles-outline" slot="start"></ion-icon>
+          <div>Feedback</div>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
