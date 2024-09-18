@@ -1,0 +1,52 @@
+<!-- home.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="logo-title-container">
+    <img src="https://i.imgur.com/26Qrx4H.png" alt="Matec" class="logo"/>
+    <h1 class="app-title">Matec Solar</h1>
+  </div>
+
+  <div class="welcome-message">
+    <ion-icon name="megaphone-outline" class="megaphone-icon"></ion-icon>
+    <p>Bem-vindo(a) ao Matec Solar! Estamos aqui para ajudar você a maximizar a eficiência da sua energia solar.</p>
+  </div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-button expand="block" fill="solid" color="success" class="square-button" routerLink="/agendamento">
+          <ion-icon name="calendar-outline" slot="icon-only"></ion-icon>
+          <div>Agendamento</div>
+        </ion-button>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-button expand="block" fill="solid" color="success" class="square-button" routerLink="/grafico">
+          <ion-icon name="bar-chart-outline" slot="icon-only"></ion-icon>
+          <div>Gráfico</div>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="6">
+        <ion-button expand="block" fill="solid" color="success" class="square-button" routerLink="/perfil">
+          <ion-icon name="person-outline" slot="icon-only"></ion-icon>
+          <div>Perfil</div>
+        </ion-button>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-button expand="block" fill="solid" color="success" class="square-button" routerLink="/feedback">
+          <ion-icon name="chatbubbles-outline" slot="icon-only"></ion-icon>
+          <div>Feedback</div>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
