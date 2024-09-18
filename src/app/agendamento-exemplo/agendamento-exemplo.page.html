@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/home']">
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Agendamento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Agendamento</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-item lines="none" class="ion-text-center">
+    <ion-icon name="megaphone-outline" size="large"></ion-icon>
+    <ion-label>Este é o calendário, selecione uma data para receber atendimento!</ion-label>
+  </ion-item>
+
+  <ion-grid>
+    <ion-row justify-content-center>
+      <ion-col size="12" size-md="6">
+        <ion-item>
+          <ion-datetime
+            display-format="DD/MM/YYYY"
+            placeholder="Escolha uma data"
+            min="2024-01-01"
+            max="2025-12-31"
+            (ionChange)="onDateChange($event)">
+          </ion-datetime>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-item>
+    <ion-label position="stacked">Motivos do problema</ion-label>
+    <ion-textarea
+      placeholder="Descreva os motivos aqui"
+      [(ngModel)]="motivoProblema">
+    </ion-textarea>
+  </ion-item>
+
+  <ion-button expand="block" (click)="salvarAgendamento()">
+    Salvar Agendamento
+  </ion-button>
+</ion-content>

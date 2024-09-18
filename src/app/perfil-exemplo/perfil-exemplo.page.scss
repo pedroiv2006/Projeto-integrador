@@ -1,0 +1,65 @@
+.welcome-container {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+  
+    ion-icon {
+      color: #ffd700; // Cor dourada para representar energia solar
+      margin-bottom: 10px;
+    }
+  
+    h2 {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #333;
+    }
+  
+    p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+  }
+  
+  // Estilos para os itens da lista de histórico de manutenção
+  ion-list {
+    margin-top: 20px;
+  }
+  
+  ion-item {
+    --background: #f9f9f9; // Fundo claro para o item
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
+    h2 {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #007bff; // Cor azul para destacar o título do agendamento
+    }
+  
+    p {
+      font-size: 1.1rem;
+      color: #666;
+    }
+  }
+  
+  // Estilos responsivos para telas menores
+  @media (max-width: 600px) {
+    .welcome-container {
+      h2 {
+        font-size: 1.5rem;
+      }
+  
+      p {
+        font-size: 1rem;
+      }
+    }
+  
+    ion-item h2 {
+      font-size: 1.2rem;
+    }
+  
+    ion-item p {
+      font-size: 1rem;
+    }
+  }

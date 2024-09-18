@@ -1,0 +1,97 @@
+ion-content {
+  --ion-background-color: #000000;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+
+  ion-card {
+    width: 100%;
+    max-width: 500px;
+    --ion-border-radius: 10px;
+    --box-shadow: 0 4px 8px rgba(33, 169, 15, 0.1);
+    margin-bottom: 20px;
+
+    &.success-card {
+      --ion-background-color: #28a745;
+      color: white;
+
+      ion-card-content {
+        padding: 20px;
+
+        ion-grid {
+          align-items: center;
+
+          ion-icon {
+            color: white;
+            margin-right: 10px;
+          }
+
+          p {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.5;
+          }
+        }
+      }
+    }
+
+    &.form-card {
+      --ion-background-color: #0a981b;
+    }
+
+    ion-card-header {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      ion-avatar {
+        margin-right: 20px;
+      }
+
+      ion-card-title {
+        font-size: 1.9rem;
+        color: #1ba705;
+      }
+    }
+
+    ion-card-content {
+      ion-item {
+        margin-bottom: 10px;
+        --padding-end: 60px; // Espaço extra para o ícone de verificação
+
+        ion-label {
+          color: #0f9213;
+        }
+
+        ion-input, ion-select {
+          --padding-start: 10px;
+          --padding-end: 50px;
+        }
+
+        ion-icon[name="checkmark-circle"] {
+          position: absolute;
+          right: 50px;
+          top: 50%;
+          font-size: 24px;
+          color: #21a90f;
+        }
+      }
+
+      ion-button {
+        --background: #28a745;
+        --border-radius: 8px;
+        --padding-start: 20px;
+        --padding-end: 20px;
+        --height: 50px;
+        font-size: 1rem;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .cidade-lista-container {
+    max-height: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/home']">
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Feedback - Matec</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- Cabeçalho com megafone e mensagem de avaliação -->
+  <div class="feedback-header">
+    <ion-icon name="megaphone-outline" size="large"></ion-icon>
+    <h2>Avalie nosso trabalho!</h2>
+    <p>Sua opinião é muito importante para melhorarmos nossos serviços na Matec.</p>
+  </div>
+
+  <!-- Área de avaliação com estrelas e comentário -->
+  <div class="rating-container">
+    <h3>Como você avalia nosso trabalho?</h3>
+
+    <!-- Avaliação com estrelas -->
+    <div class="star-rating">
+      <ion-icon *ngFor="let star of stars; let i = index" 
+                name="star" 
+                [class.filled]="i < rating"
+                (click)="rate(i + 1)">
+      </ion-icon>
+    </div>
+
+    <!-- Campo de comentário -->
+    <ion-item>
+      <ion-textarea [(ngModel)]="comment" placeholder="Deixe seu comentário"></ion-textarea>
+    </ion-item>
+
+    <!-- Botão para enviar feedback -->
+    <ion-button expand="block" (click)="submitFeedback()">Enviar Avaliação</ion-button>
+  </div>
+</ion-content>
+
+  
