@@ -1,0 +1,49 @@
+
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.wind-icon {
+  font-size: 32px;
+  color: #34c408; 
+  margin-right: 10px;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #018a03;
+}
+
+.user-table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.user-table {
+  width: 80%;
+  background-color: #2ecc71; 
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  border-collapse: collapse;
+}
+
+.user-table th, .user-table td {
+  padding: 15px;
+  border: 1px solid #27ae60;
+}
+
+.user-table th {
+  background-color: #27ae60; 
+}
+
+.user-table td ion-icon {
+  margin: 0 5px;
+  cursor: pointer;
+}
