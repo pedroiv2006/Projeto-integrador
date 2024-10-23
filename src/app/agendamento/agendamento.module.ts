@@ -1,18 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+
 import { IonicModule } from '@ionic/angular';
 
-import { CadastroUsuarioPageRoutingModule } from './cadastro-usuario-routing.module';
-import { CadastroUsuarioPage } from './cadastro-usuario.page';
+import { AgendamentoPageRoutingModule } from './agendamento-routing.module';
+
+import { AgendamentoPage } from './agendamento.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CadastroUsuarioPageRoutingModule
+    AgendamentoPageRoutingModule
   ],
-  declarations: [CadastroUsuarioPage]
+  declarations: [AgendamentoPage]
 })
-export class CadastroUsuarioPageModule {}
+export class AgendamentoPageModule {}

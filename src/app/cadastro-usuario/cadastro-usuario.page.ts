@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { RequisicaoService } from 'service/requisicao.service';
 
 @Component({
   selector: 'app-cadastro-usuario',
@@ -6,15 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cadastro-usuario.page.scss'],
 })
 export class CadastroUsuarioPage implements OnInit {
+  public id: number = 0;
   public nome: string = '';
   public cpf: string = '';
+  public email: string = '';
   public telefone: string = '';
   public CEP: string = '';
   public estado: string = '';
   public cidade: string = '';
-  public tipopessoa: string = '';
+  public autonomo_empresa: string = '';
   public senha: string = '';
   public confirmarSenha: string = '';
+
 
   // Lista de cidades em ordem alfabética
   public cidades: string[] = [
@@ -56,26 +61,55 @@ export class CadastroUsuarioPage implements OnInit {
     'Xanxerê', 'Xavantina', 'Xaxim', 'Zortéa'
   ].sort();
 
-  constructor() {}
+  constructor(
+    public rs: RequisicaoService,
+    private activated_router: ActivatedRoute,
+    private router: Router
+  ) {
+    this.activated_router.params.subscribe((params: any) => {
+      this.id = params.id;
+      if (this.id != 0) {
+        this.rs
+          .get({
+            controller: 'cadastro-usuario',
+            id: this.id,
+          })
+          .subscribe((_dados: any) => {
+            this.cpf = _dados.cpf;
+          });
+      }
+    });
+  }
 
   ngOnInit() {}
 
   salvar() {
-    // Lógica para salvar o cadastro de usuário
-    console.log('Usuário salvo:', {
-      nome: this.nome,
-      cpf: this.cpf,
-      telefone: this.telefone,
-      CEP: this.CEP,
-      estado: this.estado,
-      cidade: this.cidade,
-      tipopessoa: this.tipopessoa,
-      senha: this.senha,
-      confirmarSenha: this.confirmarSenha,
+    if (this.senha !== this.confirmarSenha) {
+      console.error('As senhas não coincidem!');
+      return;
+    }
+
+    const fd = new FormData();
+    fd.append('controller', 'cadastro-usuario');
+    fd.append('op', 'salvar');
+    fd.append('senha', this.senha);
+    fd.append('nome', this.nome);
+    fd.append('cep', this.CEP);
+    fd.append('cidade', this.cidade);
+    fd.append('telefone', this.telefone);
+    fd.append('estado', this.estado);
+    fd.append('email', this.email);
+    fd.append('cpf', this.cpf);
+    fd.append('autonomo_empresa', this.autonomo_empresa);
+
+    this.rs.post(fd).subscribe(() => {
+      this.router.navigate(['/lista-usuario']); 
     });
   }
-
+  go(rota:string){
+    window.location.href = rota;
+  }
   atualizarCidades() {
-    // Implementar lógica para atualizar cidades, se aplicável
+   
   }
 }

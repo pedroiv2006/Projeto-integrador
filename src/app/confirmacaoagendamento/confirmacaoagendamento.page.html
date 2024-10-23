@@ -1,0 +1,30 @@
+<ion-content [fullscreen]="true">
+  <div class="confirmacao-container">
+    <ion-card class="rounded-card">
+      <div class="confirmacao-content">
+        <ion-card-header class="header-center">
+          <ion-card-title class="confirmacao-title">Agendamento Confirmado</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          <!-- Mensagem de confirmação -->
+          <ion-item class="ion-text-center">
+            <ion-icon name="checkmark-circle-outline" size="large" color="success"></ion-icon>
+            <ion-label class="confirmacao-mensagem">
+              Obrigado! Seu agendamento foi confirmado com sucesso.
+            </ion-label>
+          </ion-item>
+
+          <!-- Botão para voltar à página inicial ou agendar outro -->
+          <ion-button expand="block" color="primary" [routerLink]="['/home']">
+            Voltar à Página Inicial
+          </ion-button>
+
+          <ion-button expand="block" color="secondary" [routerLink]="['/agendamento']">
+            Agendar Outro Atendimento
+          </ion-button>
+        </ion-card-content>
+      </div>
+    </ion-card>
+  </div>
+</ion-content>

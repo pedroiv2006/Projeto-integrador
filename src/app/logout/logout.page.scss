@@ -1,0 +1,27 @@
+.logout-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding: 20px;
+    
+    p {
+      font-size: 1.2rem;
+      margin: 20px 0;
+    }
+  
+    .logout-icon {
+      font-size: 4rem;
+      color: var(--ion-color-danger);
+      margin-bottom: 20px;
+    }
+  
+    ion-button {
+      width: 100%;
+      max-width: 300px;
+      --border-radius: 12px;
+    }
+  }
+  

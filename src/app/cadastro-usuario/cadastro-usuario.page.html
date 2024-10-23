@@ -31,13 +31,12 @@
   <!-- Formulário de Criação de Conta -->
   <ion-card class="form-card">
     <ion-card-header>
-      <ion-avatar>
-        <img alt="Avatar do usuário" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-      </ion-avatar>
+
       <ion-card-title>Crie sua Conta</ion-card-title>
     </ion-card-header>
 
     <ion-card-content>
+
       <ion-item>
         <ion-label position="floating">Nome completo</ion-label>
         <ion-input [(ngModel)]="nome" placeholder="Digite seu nome completo" id="username" type="text" required></ion-input>
@@ -49,6 +48,13 @@
       </ion-item>
 
       <ion-item>
+        <ion-label position="floating">E-mail</ion-label>
+        <ion-input [(ngModel)]="email" placeholder="Digite seu e-mail" id="cpf" type="text" required></ion-input>
+      </ion-item>
+
+
+
+      <ion-item>
         <ion-label position="floating">Telefone</ion-label>
         <ion-input [(ngModel)]="telefone" placeholder="Digite seu telefone" id="telefone" type="text" required></ion-input>
       </ion-item>
@@ -56,7 +62,7 @@
       <ion-item>
         <ion-label position="floating">CEP</ion-label>
         <ion-input [(ngModel)]="CEP" placeholder="Digite seu CEP" name="cep" type="text" id="cep" maxlength="9" required></ion-input>
-        <ion-note slot="end">Use "-" ex:. (88801-001)</ion-note>
+        <ion-note slot="end">Use "-" ex: (88801-001)</ion-note>
       </ion-item>
 
       <ion-item>
@@ -77,9 +83,9 @@
 
       <ion-item>
         <ion-label position="floating">Autônomo ou Empresa</ion-label>
-        <ion-select [(ngModel)]="tipopessoa" required>
-          <ion-select-option value="aut">Autônomo</ion-select-option>
-          <ion-select-option value="emp">Empresa</ion-select-option>
+        <ion-select [(ngModel)]="autonomo_empresa" required>
+          <ion-select-option value="autonomo">Autônomo</ion-select-option>
+          <ion-select-option value="empresa">Empresa</ion-select-option>
         </ion-select>
         <ion-icon name="checkmark-circle" slot="end" color="success"></ion-icon>
       </ion-item>
@@ -94,9 +100,15 @@
         <ion-input [(ngModel)]="confirmarSenha" placeholder="Confirme sua senha" id="confirmPassword" type="password" required></ion-input>
       </ion-item>
 
+      <!-- Botão Criar Conta -->
       <ion-button expand="block" type="submit" color="success" (click)="salvar()">
         Criar conta
       </ion-button>
     </ion-card-content>
   </ion-card>
+
+  <!-- Faça o Login -->
+  <ion-item lines="none" class="centered-text">
+    <p>Já tem uma conta? <ion-router-link routerLink="/login" color="primary">Faça o Login</ion-router-link></p>
+  </ion-item>
 </ion-content>

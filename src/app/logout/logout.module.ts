@@ -1,18 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+
 import { IonicModule } from '@ionic/angular';
 
-import { CadastroUsuarioPageRoutingModule } from './cadastro-usuario-routing.module';
-import { CadastroUsuarioPage } from './cadastro-usuario.page';
+import { LogoutPageRoutingModule } from './logout-routing.module';
+
+import { LogoutPage } from './logout.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CadastroUsuarioPageRoutingModule
+    LogoutPageRoutingModule
   ],
-  declarations: [CadastroUsuarioPage]
+  declarations: [LogoutPage]
 })
-export class CadastroUsuarioPageModule {}
+export class LogoutPageModule {}

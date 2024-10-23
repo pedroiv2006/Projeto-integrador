@@ -1,0 +1,54 @@
+.forgot-password-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+  
+    .forgot-password-header {
+      text-align: center;
+      margin-bottom: 30px;
+  
+      h2 {
+        font-size: 24px;
+        color: #4cc308;
+        font-weight: bold;
+      }
+  
+      p {
+        font-size: 16px;
+        color: #6c757d;
+      }
+    }
+  
+    .input-item {
+      margin-bottom: 20px;
+    }
+  
+    ion-label {
+      font-size: 14px;
+      color: #4cc308;
+    }
+  
+    ion-input {
+      --placeholder-color: #999;
+    }
+  
+    .reset-button {
+      margin-top: 20px;
+      --background: #4cc308;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: transform 0.2s ease;
+  
+      &:hover {
+        transform: scale(1.02);
+      }
+  
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+  }
+  

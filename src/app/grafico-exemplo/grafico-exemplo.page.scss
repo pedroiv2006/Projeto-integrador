@@ -1,0 +1,23 @@
+.chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* O gráfico ocupará o espaço total da tela */
+  padding: 20px; /* Espaçamento em torno do gráfico */
+}
+
+ion-title {
+  text-align: center; /* Centralizar o título na barra */
+  font-weight: bold;
+  font-size: 1.5rem; /* Tamanho maior para destaque */
+}
+
+ion-button {
+  --background: #000000; /* Cor de fundo azul */
+  --color: white; /* Cor do ícone e texto do botão */
+  border-radius: 50%; /* Estilizar o botão como um círculo */
+}
+
+ion-icon {
+  font-size: 24px; /* Tamanho do ícone para ficar mais visível */
+}

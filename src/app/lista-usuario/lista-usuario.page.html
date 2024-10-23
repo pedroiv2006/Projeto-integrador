@@ -1,34 +1,40 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Lista de Usuários</ion-title>
-    <ion-buttons slot="end">
-      <ion-button (click)="criarUsuario()">
-        <ion-icon name="add-circle-outline" slot="icon-only"></ion-icon>
-      </ion-button>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
     </ion-buttons>
+    <ion-title>Usuários</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-list>
-    <ion-item *ngFor="let usuario of usuarios">
-      <ion-avatar slot="start">
-        <img [src]="usuario.avatar" alt="{{ usuario.nome }}">
-      </ion-avatar>
-      <ion-label>
-        <h2>{{ usuario.nome }}</h2>
-        <p>{{ usuario.email }}</p>
-      </ion-label>
-      <ion-button slot="end" fill="outline" color="primary" (click)="detalhesUsuario(usuario)">
-        Detalhes
-      </ion-button>
-    </ion-item>
-  </ion-list>
+<ion-content [fullscreen]="true" id="home-content">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Usuários</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
-  <!-- Botão flutuante para criar usuário -->
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button (click)="criarUsuario()">
-      <ion-icon name="add"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
+  <div class="form-container">
+    <ion-card class="rounded-card">
+      <div class="form-content">
+        <div class="user-list-container">
+          <h2 class="title">Lista de Usuários</h2>
+          
+          <ion-list class="user-list">
+            <ion-item *ngFor="let usuario of usuarios" class="user-item">
+              <ion-label>{{ usuario.nome }}</ion-label>
+              <div class="icon-group">
+                <ion-icon name="create" (click)="editar(usuario.id)"></ion-icon>
+                <ion-icon name="trash" (click)="excluir(usuario.id)"></ion-icon>
+              </div>
+            </ion-item>
+          </ion-list>
+        </div>
+        
+        <ion-button class="submit-btn" routerlink="cadastrar" expand="block">
+          Cadastrar novo usuário
+        </ion-button>
+      </div>
+    </ion-card>
+  </div>
 </ion-content>

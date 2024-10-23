@@ -1,0 +1,105 @@
+/* Estilos gerais */
+body, ion-content {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #000000; /* Fundo mais suave */
+  }
+  
+  /* Estilo do container principal */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Estilo para o card que envolve o conteúdo */
+  .card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(5, 132, 41, 0.1); /* Sombra suave para dar profundidade */
+    padding: 30px;
+    margin: 20px 0;
+  }
+  
+  /* Estilização do cabeçalho */
+  ion-header {
+    --background: #4caf50; /* Verde sustentável */
+    color: white;
+  
+    ion-toolbar {
+      --background: transparent;
+      text-align: center;
+    }
+  
+    ion-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+  }
+  
+  /* Estilo para o cabeçalho ao colapsar */
+  ion-header[collapse="condense"] ion-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+  
+  /* Seção "Sobre Matec" */
+  .sobre-matec {
+    text-align: center; /* Centraliza o conteúdo */
+  }
+  
+  .sobre-matec h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #4caf50; /* Verde principal */
+    margin-bottom: 20px;
+  }
+  
+  .sobre-matec p {
+    line-height: 1.7;
+    font-size: 1.1rem;
+    color: #046512;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo da imagem destacada */
+  .imagem-destaque {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+  
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Efeito de profundidade */
+    }
+  }
+  
+  /* Links estilizados */
+  a {
+    color: #4caf50;
+    text-decoration: none;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  /* Responsividade para melhorar visual em telas maiores */
+  @media screen and (min-width: 768px) {
+    .sobre-matec h2 {
+      font-size: 2.8rem;
+    }
+  
+    .sobre-matec p {
+      font-size: 1.2rem;
+    }
+  
+    .card {
+      padding: 50px;
+    }
+  }
+  

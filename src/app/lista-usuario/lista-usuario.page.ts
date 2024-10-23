@@ -1,37 +1,57 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoadingController } from '@ionic/angular';
+import { RequisicaoService } from 'service/requisicao.service';
 
 @Component({
   selector: 'app-lista-usuario',
   templateUrl: './lista-usuario.page.html',
   styleUrls: ['./lista-usuario.page.scss'],
 })
-export class ListaUsuarioPage implements OnInit {
-  usuarios = [
-    {
-      nome: 'João Silva',
-      email: 'joao.silva@example.com',
-      avatar: 'https://via.placeholder.com/150'
-    },
-    {
-      nome: 'Maria Souza',
-      email: 'maria.souza@example.com',
-      avatar: 'https://via.placeholder.com/150'
-    },
-    // Adicione mais usuários aqui
-  ];
+export class ListaUsuarioPage {
+  constructor(
+    public requisicao_service: RequisicaoService,
+    public router: Router,
+    private loadingCtrl: LoadingController
+  ) { }
 
-  constructor(private router: Router) {}
-
-  ngOnInit() {}
-
-  detalhesUsuario(usuario: any) {
-    console.log('Detalhes do usuário', usuario);
-    // Implementar a lógica de navegação para a página de detalhes
+  public usuarios: Array<any> = [];
+  
+  editar(id: number) {
+    this.router.navigateByUrl('/cadastro-usuario/' + id);
   }
 
-  criarUsuario() {
-    // Redireciona para a página de cadastro de usuário
-    this.router.navigate(['/cadastro-usuario']);
+  excluir(id: number) {
+    this.requisicao_service.get({
+      controller: 'usuario-excluir',
+      id: id
+    }).subscribe(
+      (_res: any) => {
+        this.listar();
+      }
+    );
+  }
+
+  ngOnInit() {
+    this.listar();
+  }
+
+  async listar() {
+    const loading = await this.loadingCtrl.create({
+      message: 'Carregando a manivela, aguarde.'
+    });
+    loading.present();
+
+    this.requisicao_service.get({
+      controller: 'listausuario'
+    }).subscribe(
+      (_res: any) => {
+        loading.dismiss();
+        this.usuarios = _res;
+      }
+    );
+  }
+  go(rota:string){
+    window.location.href = rota;
   }
 }

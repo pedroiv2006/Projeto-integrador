@@ -1,3 +1,14 @@
+/* Variáveis para cores */
+$primary-color: #4cc308;
+$secondary-color: #2ecc71;
+$whatsapp-color: #25D366;
+$instagram-color: #C13584;
+$megaphone-color: #ff5722;
+$welcome-bg-color: #f0f8ff;
+$border-color: #dcdcdc;
+$welcome-text-color: #2f502c;
+
+/* Estilos gerais para o logo e título */
 .logo-title-container {
   display: flex;
   justify-content: center;
@@ -14,41 +25,97 @@
 .app-title {
   font-size: 24px;
   font-weight: bold;
-  color: #4cc308;
+  color: $primary-color;
   margin: 0;
 }
 
+/* Estilos para a mensagem de boas-vindas */
 .welcome-message {
   display: flex;
   align-items: center;
-  background-color: #f0f8ff;
-  border: 1px solid #dcdcdc;
+  background-color: $welcome-bg-color;
+  border: 1px solid $border-color;
   border-radius: 10px;
   padding: 15px;
   margin-bottom: 20px;
   font-size: 18px;
-  color: #2f502c;
+  color: $welcome-text-color;
 }
 
 .megaphone-icon {
   font-size: 32px;
-  color: #ff5722;
+  color: $megaphone-color;
   margin-right: 10px;
 }
 
+/* Estilos para os botões quadrados */
 .square-button {
   height: 150px;
   text-align: center;
-  --background: #2ecc71;
+  --background: #2ecc71; /* Cor de fundo personalizada */
   --color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Suave aumento e sombra */
+
+  ion-icon {
+    font-size: 48px;
+    margin-bottom: 8px;
+  }
+
+  /* Efeito ao tocar */
+  &:active {
+    transform: scale(1.1); /* Leve zoom ao tocar */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra extra ao tocar */
+  }
+
+  /* Animação ao passar o mouse (para web e desktops) */
+  &:hover {
+    transform: scale(1.05); /* Leve zoom */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  }
 }
 
-.square-button ion-icon {
-  font-size: 48px;
-  margin-bottom: 8px;
+
+.footer-toolbar {
+  background-color: #f8f9fa; /* Cor de fundo suave */
+  border-top: 1px solid #e0e0e0; /* Linha sutil no topo do rodapé */
 }
+
+.footer-container {
+  display: flex;
+  justify-content: center; /* Centraliza os botões */
+  align-items: center;
+  padding: 10px;
+}
+
+.footer-button {
+  margin: 0 10px;
+  transition: transform 0.3s ease; /* Animação suave ao passar o mouse */
+}
+
+.footer-button:hover {
+  transform: scale(1.2); /* Aumenta o botão ao passar o mouse */
+}
+
+.footer-icon {
+  font-size: 28px; /* Aumenta o tamanho dos ícones */
+}
+
+.whatsapp-icon {
+  color: #25D366; /* Cor do WhatsApp */
+}
+
+.instagram-icon {
+  color: #C13584; /* Cor do Instagram */
+}
+.celesc-icon {
+  width: 30px; /* Ajuste o tamanho conforme necessário */
+  height: auto; /* Mantém a proporção */
+}
+
+
+

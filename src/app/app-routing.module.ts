@@ -62,6 +62,30 @@ const routes: Routes = [
     path: 'feedback-exemplo',
     loadChildren: () => import('./feedback-exemplo/feedback-exemplo.module').then( m => m.FeedbackExemploPageModule)
   },
+  {
+    path: 'notificacoes',
+    loadChildren: () => import('./notificacoes/notificacoes.module').then( m => m.NotificacoesPageModule)
+  },
+  {
+    path: 'logout',
+    loadChildren: () => import('./logout/logout.module').then( m => m.LogoutPageModule)
+  },
+  {
+    path: 'esqueceu-senha',
+    loadChildren: () => import('./esqueceu-senha/esqueceu-senha.module').then( m => m.EsqueceuSenhaPageModule)
+  },
+  {
+    path: 'sobre-exemplo',
+    loadChildren: () => import('./sobre-exemplo/sobre-exemplo.module').then( m => m.SobreExemploPageModule)
+  },
+  {
+    path: 'confirmacaoagendamento',
+    loadChildren: () => import('./confirmacaoagendamento/confirmacaoagendamento.module').then( m => m.ConfirmacaoagendamentoPageModule)
+  },
+  {
+    path: 'agendamento',
+    loadChildren: () => import('./agendamento/agendamento.module').then( m => m.AgendamentoPageModule)
+  },
 
 ];
 

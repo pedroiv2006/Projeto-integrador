@@ -1,0 +1,49 @@
+<ion-content [fullscreen]="true">
+  <div class="agendamento-container">
+    <ion-card class="rounded-card">
+      <div class="agendamento-content">
+        <ion-card-header class="header-center">
+          <ion-card-title class="agendamento-title">Agendar Atendimento</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+
+          <!-- Formulário de agendamento -->
+          <ion-item>
+            <ion-label position="floating">Nome</ion-label>
+            <ion-input [(ngModel)]="nome" placeholder="Digite seu nome" id="nome" type="text" required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Endereço</ion-label>
+            <ion-input [(ngModel)]="endereco" placeholder="Digite seu endereço" id="endereco" type="text" required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Data e Hora</ion-label>
+            <ion-datetime [(ngModel)]="dataHora" display-format="YYYY-MM-DD HH:mm:ss" placeholder="Selecione a data e hora" id="dataHora" [min]="minDate" [max]="maxDate"></ion-datetime>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Motivo do Problema</ion-label>
+            <ion-textarea [(ngModel)]="motivoProblema" placeholder="Descreva o motivo do problema" id="motivoProblema" required></ion-textarea>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Observação (Opcional)</ion-label>
+            <ion-textarea [(ngModel)]="observacao" placeholder="Insira observações, se houver" id="observacao"></ion-textarea>
+          </ion-item>
+
+          <!-- Mensagem de erro -->
+          <ion-card *ngIf="mensagemErro" class="error-card">
+            <ion-card-content class="error-content">
+              {{ mensagemErro }}
+            </ion-card-content>
+          </ion-card>
+
+          <ion-button expand="block" class="button" (click)="salvarAgendamento()">Salvar Agendamento</ion-button>
+
+        </ion-card-content>
+      </div>
+    </ion-card>
+  </div>
+</ion-content>
