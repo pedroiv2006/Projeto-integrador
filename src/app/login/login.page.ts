@@ -9,6 +9,11 @@ export class LoginPage implements OnInit {
 
   constructor() { }
 
+  go(rota:string){
+    window.location.href=rota;
+  }
+
+
   ngOnInit() {
   }
 

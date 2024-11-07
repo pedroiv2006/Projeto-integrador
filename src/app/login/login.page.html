@@ -46,12 +46,14 @@
 
         <ion-item lines="none">
           <!-- Corrigido para ion-button com estilo de link -->
-          <ion-button fill="clear" color="primary" [routerLink]="['/esqueceu-senha']">
+          <ion-button fill="clear" color="primary" (click)="go('/esqueceu-senha')">
             Esqueceu sua senha?
           </ion-button>
         </ion-item>
 
         <ion-button expand="block" type="submit" color="primary">Entrar</ion-button>
+      
+          
 
         <ion-item lines="none">
           <ion-router-link routerLink="/cadastro-usuario" color="primary">

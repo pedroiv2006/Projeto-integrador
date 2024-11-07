@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-button [routerLink]="['/home']">
+      <ion-button (click)="go('/home')">
         <ion-icon name="home-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -101,9 +101,9 @@
       </ion-item>
 
       <!-- Botão Criar Conta -->
-      <ion-button expand="block" type="submit" color="success" (click)="salvar()">
-        Criar conta
-      </ion-button>
+<ion-button expand="block" type="submit" color="success" (click)="go('/home')">
+  Criar conta 
+</ion-button>
     </ion-card-content>
   </ion-card>
 

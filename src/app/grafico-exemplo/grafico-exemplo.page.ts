@@ -11,10 +11,10 @@ public data: any;
 
   ngOnInit() {
     this.data = {
-      labels: ['A','B','C'],
+      labels: ['Novembro','Outubro' ],
       datasets:[
         {
-          data: [540,325,702]
+          data: [6,11]
         }
       ]
     }

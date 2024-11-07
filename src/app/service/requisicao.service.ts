@@ -6,7 +6,7 @@ import { TraducaoService } from './traducao.service';
   providedIn: 'root'
 })
 export class RequisicaoService {
-
+  public api_url = 'https://miles.app.br/matec/index.php';
   constructor(
     public http: HttpClient,
     public traducao_service: TraducaoService
@@ -14,7 +14,7 @@ export class RequisicaoService {
 
   get(dados: any) {
     dados['idioma'] = this.traducao_service.getIdioma(); 
-    return this.http.get('/requisicao', {
+    return this.http.get(this.api_url, {
       params: dados
     });
   }
@@ -25,6 +25,6 @@ export class RequisicaoService {
         'Access-Control-Allow-Origin': '*'
       })
     };
-    return this.http.post('/requisicao', formData, httpOptions);
+    return this.http.post(this.api_url, formData, httpOptions);
   }
 }

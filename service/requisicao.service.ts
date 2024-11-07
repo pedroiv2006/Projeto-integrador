@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Injectable } from '@angular/core';
+import { TraducaoService } from './traducao.service';
 
 @Injectable({
 
@@ -10,25 +11,25 @@ providedIn: 'root'
 
 export class RequisicaoService {
 
-constructor(
+    public api_url = 'https://miles.app.br/matec/index.php';
+    constructor(
+      public http: HttpClient,
+      public traducao_service: TraducaoService
+    ) {}
 
-public http:HttpClient
-
-)
-
-{}
-
-get(dados:any){
-    return this.http.get('/requisicao',{
-        params:dados
+get(dados: any) {
+    dados['idioma'] = this.traducao_service.getIdioma(); 
+    return this.http.get(this.api_url, {
+      params: dados
     });
-}
-post (formData:any){
+  }
+
+  post(formData: any) {
     const httpOptions = {
-        headers: new HttpHeaders({ 
-        'Access-Control-Allow-Origin' : '*'
-    })
+      headers: new HttpHeaders({
+        'Access-Control-Allow-Origin': '*'
+      })
     };
-    return this.http.post('/requisicao', formData, httpOptions);
-}
+    return this.http.post(this.api_url, formData, httpOptions);
+  }
 }

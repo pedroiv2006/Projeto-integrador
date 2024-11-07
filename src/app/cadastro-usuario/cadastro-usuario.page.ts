@@ -107,7 +107,7 @@ export class CadastroUsuarioPage implements OnInit {
     });
   }
   go(rota:string){
-    window.location.href = rota;
+    window.location.href=rota;
   }
   atualizarCidades() {
    

@@ -9,6 +9,10 @@ export class ConfirmacaoagendamentoPage implements OnInit {
 
   constructor() { }
 
+  go(rota:string){
+    window.location.href=rota;
+  }
+
   ngOnInit() {
   }
 
